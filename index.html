@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Alexis Bernal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="rutValidation.js"></script>
+    <!-- Enlace al archivo de validación de RUT con defer para que cargue después del HTML -->
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logos/images.png" alt="Logo de Alexis Bernal" id="logo">
+        </div>
+        <div class="contact-info" id="contact-info">
+        </div>
+    </header>
+    <!--muestra las imagenes de mis intereses a traves de un slider-->
+    <section id="intereses">
+        <h2>Mis Intereses</h2>
+        <div class="slider">
+            <div class="slide active">
+                <img src="imagenes/colo-colo.png" alt="Interés 1">
+                <button
+                    onclick="abrirSitio('https://www.colocolo.cl/historia/fundacion/la-fundacion-del-club-1920-1930')">Ver
+                    más</button>
+            </div>
+            <div class="slide">
+                <img src="imagenes/bmw.png" alt="Interés 2">
+                <button
+                    onclick="abrirSitio('https://www.bmw.com/es/automotive-life/significado-de-bmw-origen-e-historia.html')">Ver
+                    más</button>
+            </div>
+            <div class="slide">
+                <img src="imagenes/juegos.png" alt="Interés 3">
+                <button onclick="abrirSitio('https://definicion.de/videojuego/')">Ver más</button>
+            </div>
+        </div>
+    </section>
+    <!--Muestra  las imágenes de logos lenguajes de programación en un formato de carrusel.-->
+    <section id="mis-lenguajes">
+        <h2>Mis Lenguajes</h2>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item"><img src="logos/html.png" alt="HTML"></div>
+                <div class="carousel-item"><img src="logos/sql2.png" alt="sql"></div>
+                <div class="carousel-item"><img src="logos/javascript.png" alt="JavaScript"></div>
+                <div class="carousel-item"><img src="logos/python.png" alt="Python"></div>
+                <div class="carousel-item"><img src="logos/Java-Logo.png" alt="Java"></div>
+                <div class="carousel-item"><img src="logos/C.png" alt="C#"></div>
+            </div>
+            <button class="carousel-control prev" onclick="previo()">&#10094;</button>
+            <button class="carousel-control next" onclick="siguiente()">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="conocimientos">
+        <h2 class="centered">Mis Conocimientos</h2>
+        <div class="container">
+            <ul id="app-list" class="left-align"></ul>
+        </div>
+    </section>
+
+    <!--  estructura del formulario permite al usuario ingresar un RUT en el campo de texto y luego presionar el botón "Validar" para verificar si el RUT es válido.-->
+    <section id="validacion-rut">
+        <h2 class="centered">Validación de RUT</h2>
+        <div class="container">
+            <form id="rutForm">
+                <label for="rut">RUT:</label>
+                <input type="text" id="rut" name="rut" placeholder="Ingrese su RUT" required>
+                <div>
+                    <button id="buttonRut" type="button">Validar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script> <!-- Enlace al archivo principal de JavaScript -->
+
+</body>
+
+</html>
